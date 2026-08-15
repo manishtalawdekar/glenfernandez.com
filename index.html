@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Barlow:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<meta name="description" content="Glen Fernandez — Toronto guitarist, bass guitarist and mandolin player for stages, studios and sessions.">
+<title>Glen Fernandez | Guitarist · Bass Guitar · Mandolin</title>
+<style>
+:root{
+  --bg:#0a0a0a; --panel:#111; --text:#f5f2eb; --muted:#aaa59d;
+  --line:#292929; --accent:#d79a4b; --max:1180px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Barlow",sans-serif;line-height:1.65;font-weight:400}
+a{color:inherit;text-decoration:none}
+.container{width:min(var(--max),calc(100% - 40px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:20px 0;background:linear-gradient(#050505dd,transparent);transition:.3s}
+.nav-inner{display:flex;align-items:center;justify-content:space-between}
+.logo{font-family:"Bebas Neue",sans-serif;font-size:27px;font-weight:400;letter-spacing:.12em}
+.nav-links{display:flex;gap:28px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.12em}
+.nav-links a:hover{color:var(--accent)}
+.hero{min-height:100vh;position:relative;display:flex;align-items:end;overflow:hidden}
+.hero-bg{position:absolute;inset:0;background:url("images/live-3.jpg") center/cover no-repeat;filter:brightness(.48)}
+.hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050505d9 0%,#05050555 55%,#05050522),linear-gradient(0deg,#0a0a0a 0%,transparent 45%)}
+.hero-content{position:relative;z-index:2;padding:150px 0 90px}
+.kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.28em;font-size:12px;font-weight:700}
+h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(54px,10vw,126px);line-height:.9;margin:18px 0 25px;letter-spacing:-.055em;max-width:900px}
+.hero p{font-size:clamp(17px,2vw,23px);color:#ddd;max-width:680px}
+.ctas{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
+.btn{font-family:"Barlow",sans-serif;display:inline-block;padding:13px 22px;border:1px solid #ddd;border-radius:2px;text-transform:uppercase;font-size:12px;letter-spacing:.15em;font-weight:700}
+.btn.primary{background:var(--accent);border-color:var(--accent);color:#111}
+section{padding:105px 0;border-top:1px solid var(--line)}
+.eyebrow{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.25em;font-weight:700}
+h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(38px,6vw,72px);line-height:1;margin:12px 0 30px;letter-spacing:-.04em}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
+.about-photo{height:580px;background:url("images/live-5.jpg") center/cover no-repeat}
+.about-copy{font-size:18px;color:#c9c5be}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:45px}
+.stat{background:var(--bg);padding:25px}
+.stat strong{display:block;font-size:38px;color:var(--text)}
+.stat span{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px}
+.gallery figure{margin:0;overflow:hidden;background:#161616}
+.gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .6s;filter:brightness(.82)}
+.gallery figure:hover img{transform:scale(1.06);filter:brightness(1)}
+.gallery .wide{grid-column:span 2}
+.gallery .tall{grid-row:span 2}
+.contact{display:grid;grid-template-columns:1.1fr .9fr;gap:70px}
+.contact-copy{font-size:19px;color:#c9c5be}
+.contact-card{border:1px solid var(--line);padding:35px;background:#0e0e0e}
+.contact-card a{display:block;font-size:18px;padding:15px 0;border-bottom:1px solid var(--line)}
+.contact-card a:last-child{border-bottom:0}
+.label{display:block;color:var(--accent);font-size:10px;text-transform:uppercase;letter-spacing:.18em;margin-bottom:4px}
+footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px}
+@media(max-width:800px){
+ .nav-links{display:none}
+ .hero-content{padding-bottom:60px}
+ .about-grid,.contact{grid-template-columns:1fr;gap:35px}
+ .about-photo{height:420px}
+ .gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:190px}
+ .gallery .wide{grid-column:span 2}
+ .stats{grid-template-columns:1fr}
+}
+</style>
+</head>
+<body>
+<nav>
+  <div class="container nav-inner">
+    <a class="logo" href="#">GLEN FERNANDEZ</a>
+    <div class="nav-links">
+      <a href="#about">About</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="hero-bg"></div>
+  <div class="container hero-content">
+    <div class="kicker">Guitar · Bass Guitar · Mandolin · Toronto, Canada</div>
+    <h1>Glen Fernandez<br>Guitarist in Toronto</h1>
+    <p>Guitar, bass guitar and mandolin for stages, studios and sessions. Blues-rooted playing with warm tube tone, patient phrasing and a rhythm-section instinct.</p>
+    <div class="ctas">
+      <a class="btn primary" href="#contact">Book a show</a>
+      <a class="btn" href="#gallery">View gallery</a>
+    </div>
+  </div>
+</header>
+
+<section id="about">
+  <div class="container about-grid">
+    <div class="about-photo"></div>
+    <div>
+      <div class="eyebrow">About</div>
+      <h2>Six strings,<br>one voice.</h2>
+      <div class="about-copy">
+        <p>Glen Fernandez is a Toronto-based musician working across guitar, bass guitar and mandolin. His sound moves through blues, rock, funk and jazz-tinged soul — feel over flash, warm tube tone, patient phrasing and a rhythm section instinct built from years of live work.</p>
+        <p>From packed club stages to quiet studio sessions, Glen brings a full sonic palette: clean chime, gritty overdrive and slow-burning solos that serve the song first.</p>
+        <p>Available for live shows, session recording, depping and collaborations in the GTA and beyond.</p>
+      </div>
+      <div class="stats">
+        <div class="stat"><strong>25+</strong><span>Years playing</span></div>
+        <div class="stat"><strong>1000+</strong><span>Shows performed</span></div>
+        <div class="stat"><strong>TOR</strong><span>Home base</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="gallery">
+  <div class="container">
+    <div class="eyebrow">Gallery</div>
+    <h2>On stage.</h2>
+    <div class="gallery">
+      <figure class="wide tall"><img src="images/live-7.jpg" alt="Glen Fernandez performing on stage"></figure>
+      <figure><img src="images/live-3.jpg" alt="Glen Fernandez performing"></figure>
+      <figure><img src="images/live-10.jpg" alt="Live performance"></figure>
+      <figure class="tall"><img src="images/live-6.jpg" alt="Glen Fernandez playing acoustic guitar"></figure>
+      <figure class="wide"><img src="images/live-1.jpg" alt="Festival crowd at sunset"></figure>
+      <figure><img src="images/live-4.jpg" alt="Glen Fernandez playing guitar"></figure>
+      <figure><img src="images/live-9.jpg" alt="Glen Fernandez with red Stratocaster"></figure>
+      <figure class="wide"><img src="images/live-8.jpg" alt="Band performing on stage"></figure>
+      <figure><img src="images/live-2.jpg" alt="Live performance"></figure>
+      <figure><img src="images/live-5.jpg" alt="Live performance"></figure>
+    </div>
+  </div>
+</section>
+
+<section id="contact">
+  <div class="container contact">
+    <div>
+      <div class="eyebrow">Contact</div>
+      <h2>Book a show.</h2>
+      <div class="contact-copy">
+        <p>Gigs, sessions, depping or collaborations — send the details and Glen will get back to you.</p>
+      </div>
+      <div class="ctas">
+        <a class="btn primary" href="mailto:contact@glenfernandez.com">Email Glen</a>
+        <a class="btn" href="tel:+19054424183">Call 905-442-4183</a>
+      </div>
+    </div>
+    <div class="contact-card">
+      <a href="mailto:contact@glenfernandez.com"><span class="label">Email</span>contact@glenfernandez.com</a>
+      <a href="tel:+19054424183"><span class="label">Phone</span>905-442-4183</a>
+      <a href="https://www.instagram.com/glenfernandez91" target="_blank" rel="noopener"><span class="label">Instagram</span>@glenfernandez91</a>
+      <a href="https://www.facebook.com/glen.fernandes.18" target="_blank" rel="noopener"><span class="label">Facebook</span>Glen Fernandez</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="container">© 2026 Glen Fernandez · Guitar · Bass Guitar · Mandolin · Toronto, Canada</div>
+</footer>
+</body>
+</html>
