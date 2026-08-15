@@ -28,10 +28,10 @@
 }
 *{box-sizing:border-box}
 html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:"Barlow",sans-serif;line-height:1.65;font-weight:400}
+body{margin:0;background:#090909;color:#f4f1eb;font-family:"Barlow",sans-serif;line-height:1.65;font-weight:400;-webkit-font-smoothing:antialiased}
 a{color:inherit;text-decoration:none}
-.container{width:min(var(--max),calc(100% - 40px));margin:auto}
-nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:20px 0;background:linear-gradient(#050505dd,transparent);transition:.3s}
+.container{width:min(var(--max),calc(100% - 48px));margin:auto}
+nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:24px 0;background:linear-gradient(180deg,rgba(5,5,5,.88),rgba(5,5,5,0));transition:.3s}
 .nav-inner{display:flex;align-items:center;justify-content:space-between}
 .logo{font-family:"Bebas Neue",sans-serif;font-size:27px;font-weight:400;letter-spacing:.12em}
 .nav-links{display:flex;gap:28px;font-size:13px;font-weight:500;text-transform:uppercase;letter-spacing:.12em}
@@ -39,24 +39,24 @@ nav{position:fixed;top:0;left:0;right:0;z-index:20;padding:20px 0;background:lin
 .hero{min-height:100vh;position:relative;display:flex;align-items:end;overflow:hidden}
 .hero-bg{position:absolute;inset:0;background:url("images/live-3.jpg") center/cover no-repeat;filter:brightness(.48)}
 .hero:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#050505d9 0%,#05050555 55%,#05050522),linear-gradient(0deg,#0a0a0a 0%,transparent 45%)}
-.hero-content{position:relative;z-index:2;padding:150px 0 90px}
+.hero-content{position:relative;z-index:2;padding:170px 0 105px}
 .kicker{color:var(--accent);text-transform:uppercase;letter-spacing:.28em;font-size:12px;font-weight:700}
-h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(54px,10vw,126px);line-height:.9;margin:18px 0 25px;letter-spacing:-.055em;max-width:900px}
-.hero p{font-size:clamp(17px,2vw,23px);color:#ddd;max-width:680px}
+h1{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(58px,9vw,118px);line-height:.88;margin:18px 0 28px;letter-spacing:.005em;max-width:920px}
+.hero p{font-size:clamp(17px,1.65vw,21px);color:#d7d4ce;max-width:680px;line-height:1.55}
 .ctas{display:flex;gap:14px;margin-top:30px;flex-wrap:wrap}
 .btn{font-family:"Barlow",sans-serif;display:inline-block;padding:13px 22px;border:1px solid #ddd;border-radius:2px;text-transform:uppercase;font-size:12px;letter-spacing:.15em;font-weight:700}
 .btn.primary{background:var(--accent);border-color:var(--accent);color:#111}
-section{padding:105px 0;border-top:1px solid var(--line)}
+section{padding:112px 0;border-top:1px solid #252525;position:relative}
 .eyebrow{font-size:11px;color:var(--accent);text-transform:uppercase;letter-spacing:.25em;font-weight:700}
 h2{font-family:"Bebas Neue",sans-serif;font-weight:400;font-size:clamp(38px,6vw,72px);line-height:1;margin:12px 0 30px;letter-spacing:-.04em}
-.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:70px;align-items:center}
-.about-photo{height:580px;background:url("images/live-5.jpg") center/cover no-repeat}
+.about-grid{display:grid;grid-template-columns:1fr 1.1fr;gap:78px;align-items:center}
+.about-photo{height:590px;background:url("images/live-5.jpg") center/cover no-repeat;filter:brightness(.9)}
 .about-copy{font-size:18px;color:#c9c5be}
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line);margin-top:45px}
 .stat{background:var(--bg);padding:25px}
 .stat strong{display:block;font-size:38px;color:var(--text)}
 .stat span{font-size:11px;text-transform:uppercase;letter-spacing:.14em;color:var(--muted)}
-.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:230px;gap:10px}
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:220px;gap:12px}
 .gallery figure{margin:0;overflow:hidden;background:#161616}
 .gallery img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s,filter .6s;filter:brightness(.82)}
 .gallery figure:hover img{transform:scale(1.06);filter:brightness(1)}
@@ -117,8 +117,10 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
 <header class="hero">
   <div class="hero-bg"></div>
   <div class="container hero-content">
-    <div class="kicker">Guitar · Bass Guitar · Mandolin · Toronto, Canada</div>
-    <h1>Toronto Guitarist,<br>Bass Guitarist &amp; Mandolin Player</h1>
+    <div class="kicker">Guitar · Bass Guitar · Mandolin</div>
+    <h1>Glen Fernandez</h1>
+    <div class="kicker" style="font-size:clamp(16px,1.8vw,22px);margin-top:10px;">Guitarist in Toronto</div>
+    <div class="kicker" style="margin-top:8px;">Toronto, Canada</div>
     <p>Guitar, bass guitar and mandolin for stages, studios and sessions. Blues-rooted playing with warm tube tone, patient phrasing and a rhythm-section instinct.</p>
     <div class="ctas">
       <a class="btn primary" href="#contact">Book a show</a>
@@ -191,5 +193,6 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
 <footer>
   <div class="container">© 2026 Glen Fernandez · Guitar · Bass Guitar · Mandolin · Toronto, Canada</div>
 </footer>
+<div aria-hidden="true" style="position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");"></div>
 </body>
 </html>
