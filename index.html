@@ -127,6 +127,25 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
 .resume-role{font-weight:600;color:var(--text)!important}
 @media(max-width:800px){.resume-grid{grid-template-columns:1fr}.resume-wide{grid-column:auto}}
 </style>
+<style>
+.gallery figure{position:relative;cursor:zoom-in}
+.gallery figure::after{content:"View full image";position:absolute;right:12px;bottom:12px;padding:6px 9px;background:rgba(0,0,0,.7);color:#fff;font-size:10px;letter-spacing:.12em;text-transform:uppercase;opacity:0;transition:opacity .25s;pointer-events:none}
+.gallery figure:hover::after{opacity:1}
+.lightbox{position:fixed;inset:0;background:rgba(0,0,0,.94);z-index:100;display:none;align-items:center;justify-content:center;padding:30px}
+.lightbox.open{display:flex}
+.lightbox img{max-width:94vw;max-height:90vh;width:auto;height:auto;object-fit:contain;box-shadow:0 10px 50px rgba(0,0,0,.6)}
+.lightbox button{position:absolute;border:1px solid rgba(255,255,255,.35);background:rgba(0,0,0,.55);color:#fff;width:46px;height:46px;border-radius:50%;font-size:25px;cursor:pointer}
+.lightbox button:hover{background:rgba(255,255,255,.15)}
+.lightbox-close{top:22px;right:22px}
+.lightbox-prev{left:22px;top:50%;transform:translateY(-50%)}
+.lightbox-next{right:22px;top:50%;transform:translateY(-50%)}
+.lightbox-caption{position:absolute;left:50%;bottom:18px;transform:translateX(-50%);color:#ddd;font-size:12px;letter-spacing:.08em;text-align:center;max-width:80%}
+@media(max-width:700px){
+ .lightbox{padding:12px}
+ .lightbox-prev{left:10px}.lightbox-next{right:10px}.lightbox-close{top:10px;right:10px}
+ .gallery figure::after{display:none}
+}
+</style>
 </head>
 <body>
 <nav>
@@ -182,36 +201,36 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
   <div class="eyebrow">Gallery</div>
   <h2>On stage.</h2>
   <div class="gallery">
-   <figure class="wide tall"><img loading="eager" src="images/live-7.jpg" alt="Glen Fernandez performing on stage"></figure>
-   <figure><img loading="lazy" src="images/live-3.jpg" alt="Glen Fernandez performing"></figure>
-   <figure><img loading="lazy" src="images/live-10.jpg" alt="Live performance"></figure>
-   <figure class="tall"><img loading="lazy" src="images/live-6.jpg" alt="Glen Fernandez playing acoustic guitar"></figure>
-   <figure class="wide"><img loading="lazy" src="images/live-1.jpg" alt="Festival crowd at sunset"></figure>
-   <figure><img loading="lazy" src="images/live-4.jpg" alt="Glen Fernandez playing guitar"></figure>
-   <figure><img loading="lazy" src="images/live-9.jpg" alt="Glen Fernandez with red Stratocaster"></figure>
-   <figure class="wide"><img src="images/live-8.jpg" alt="Band performing on stage" loading="lazy"></figure>
-   <figure><img src="images/live-2.jpg" alt="Live performance" loading="lazy"></figure>
-   <figure><img src="images/live-5.jpg" alt="Live performance" loading="lazy"></figure>
-   <figure class="tall"><img src="images/live-11.jpeg" alt="Glen Fernandez performing with electric guitar" loading="lazy"></figure>
-   <figure><img src="images/live-12.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
-   <figure class="wide"><img src="images/live-13.jpeg" alt="Glen Fernandez playing guitar on stage" loading="lazy"></figure>
-   <figure><img src="images/live-14.jpeg" alt="Glen Fernandez portrait with guitar" loading="lazy"></figure>
-   <figure class="wide"><img src="images/live-15.jpeg" alt="Glen Fernandez performing under stage lights" loading="lazy"></figure>
-   <figure><img src="images/live-16.jpeg" alt="Glen Fernandez performing acoustic guitar" loading="lazy"></figure>
-   <figure class="tall"><img src="images/live-17.jpeg" alt="Glen Fernandez playing electric guitar" loading="lazy"></figure>
-   <figure><img src="images/live-18.jpeg" alt="Glen Fernandez live close-up" loading="lazy"></figure>
-   <figure class="wide"><img src="images/live-19.jpeg" alt="Glen Fernandez performing with acoustic guitar" loading="lazy"></figure>
-   <figure><img src="images/live-20.jpeg" alt="Glen Fernandez performing with guitar" loading="lazy"></figure>
-   <figure class="wide"><img src="images/live-21.jpeg" alt="Glen Fernandez performing at a live concert" loading="lazy"></figure>
-   <figure><img src="images/live-22.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
-   <figure><img src="images/live-23.jpeg" alt="Glen Fernandez performing with guitar" loading="lazy"></figure>
-   <figure class="tall"><img src="images/live-24.jpeg" alt="Glen Fernandez performing on stage" loading="lazy"></figure>
-   <figure><img src="images/live-25.jpeg" alt="Glen Fernandez playing guitar" loading="lazy"></figure>
-   <figure class="wide"><img src="images/live-26.jpeg" alt="Glen Fernandez performing with electric guitar" loading="lazy"></figure>
-   <figure><img src="images/live-27.jpeg" alt="Glen Fernandez live performance" loading="lazy"></figure>
-   <figure class="wide"><img src="images/live-28.jpeg" alt="Glen Fernandez performing with acoustic guitar" loading="lazy"></figure>
-   <figure><img src="images/live-29.jpeg" alt="Glen Fernandez on stage" loading="lazy"></figure>
-   <figure class="tall"><img src="images/live-30.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
+   <figure data-gallery-index="0" class="wide tall"><img loading="eager" src="images/live-7.jpg" alt="Glen Fernandez performing on stage"></figure>
+   <figure data-gallery-index="1"><img loading="lazy" src="images/live-3.jpg" alt="Glen Fernandez performing"></figure>
+   <figure data-gallery-index="2"><img loading="lazy" src="images/live-10.jpg" alt="Live performance"></figure>
+   <figure data-gallery-index="3" class="tall"><img loading="lazy" src="images/live-6.jpg" alt="Glen Fernandez playing acoustic guitar"></figure>
+   <figure data-gallery-index="4" class="wide"><img loading="lazy" src="images/live-1.jpg" alt="Festival crowd at sunset"></figure>
+   <figure data-gallery-index="5"><img loading="lazy" src="images/live-4.jpg" alt="Glen Fernandez playing guitar"></figure>
+   <figure data-gallery-index="6"><img loading="lazy" src="images/live-9.jpg" alt="Glen Fernandez with red Stratocaster"></figure>
+   <figure data-gallery-index="7" class="wide"><img src="images/live-8.jpg" alt="Band performing on stage" loading="lazy"></figure>
+   <figure data-gallery-index="8"><img src="images/live-2.jpg" alt="Live performance" loading="lazy"></figure>
+   <figure data-gallery-index="9"><img src="images/live-5.jpg" alt="Live performance" loading="lazy"></figure>
+   <figure data-gallery-index="10" class="tall"><img src="images/live-11.jpeg" alt="Glen Fernandez performing with electric guitar" loading="lazy"></figure>
+   <figure data-gallery-index="11"><img src="images/live-12.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
+   <figure data-gallery-index="12" class="wide"><img src="images/live-13.jpeg" alt="Glen Fernandez playing guitar on stage" loading="lazy"></figure>
+   <figure data-gallery-index="13"><img src="images/live-14.jpeg" alt="Glen Fernandez portrait with guitar" loading="lazy"></figure>
+   <figure data-gallery-index="14" class="wide"><img src="images/live-15.jpeg" alt="Glen Fernandez performing under stage lights" loading="lazy"></figure>
+   <figure data-gallery-index="15"><img src="images/live-16.jpeg" alt="Glen Fernandez performing acoustic guitar" loading="lazy"></figure>
+   <figure data-gallery-index="16" class="tall"><img src="images/live-17.jpeg" alt="Glen Fernandez playing electric guitar" loading="lazy"></figure>
+   <figure data-gallery-index="17"><img src="images/live-18.jpeg" alt="Glen Fernandez live close-up" loading="lazy"></figure>
+   <figure data-gallery-index="18" class="wide"><img src="images/live-19.jpeg" alt="Glen Fernandez performing with acoustic guitar" loading="lazy"></figure>
+   <figure data-gallery-index="19"><img src="images/live-20.jpeg" alt="Glen Fernandez performing with guitar" loading="lazy"></figure>
+   <figure data-gallery-index="20" class="wide"><img src="images/live-21.jpeg" alt="Glen Fernandez performing at a live concert" loading="lazy"></figure>
+   <figure data-gallery-index="21"><img src="images/live-22.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
+   <figure data-gallery-index="22"><img src="images/live-23.jpeg" alt="Glen Fernandez performing with guitar" loading="lazy"></figure>
+   <figure data-gallery-index="23" class="tall"><img src="images/live-24.jpeg" alt="Glen Fernandez performing on stage" loading="lazy"></figure>
+   <figure data-gallery-index="24"><img src="images/live-25.jpeg" alt="Glen Fernandez playing guitar" loading="lazy"></figure>
+   <figure data-gallery-index="25" class="wide"><img src="images/live-26.jpeg" alt="Glen Fernandez performing with electric guitar" loading="lazy"></figure>
+   <figure data-gallery-index="26"><img src="images/live-27.jpeg" alt="Glen Fernandez live performance" loading="lazy"></figure>
+   <figure data-gallery-index="27" class="wide"><img src="images/live-28.jpeg" alt="Glen Fernandez performing with acoustic guitar" loading="lazy"></figure>
+   <figure data-gallery-index="28"><img src="images/live-29.jpeg" alt="Glen Fernandez on stage" loading="lazy"></figure>
+   <figure data-gallery-index="29" class="tall"><img src="images/live-30.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
   </div>
  </div>
 </section>
@@ -316,5 +335,63 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
  <div class="container">© 2026 Glen Fernandez · Guitar · Bass Guitar · Mandolin · Toronto, Canada</div>
 </footer>
 <div aria-hidden="true" style="position:fixed;inset:0;pointer-events:none;z-index:50;opacity:.035;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='.7'/%3E%3C/svg%3E");"></div>
+
+<div class="lightbox" id="galleryLightbox" aria-hidden="true" role="dialog" aria-label="Gallery image viewer">
+  <button class="lightbox-close" type="button" aria-label="Close full image">×</button>
+  <button class="lightbox-prev" type="button" aria-label="Previous image">‹</button>
+  <img id="lightboxImage" src="" alt="">
+  <button class="lightbox-next" type="button" aria-label="Next image">›</button>
+  <div class="lightbox-caption" id="lightboxCaption"></div>
+</div>
+<script>
+(function () {
+  const figures = Array.from(document.querySelectorAll(".gallery figure"));
+  const box = document.getElementById("galleryLightbox");
+  const image = document.getElementById("lightboxImage");
+  const caption = document.getElementById("lightboxCaption");
+  const close = document.querySelector(".lightbox-close");
+  const prev = document.querySelector(".lightbox-prev");
+  const next = document.querySelector(".lightbox-next");
+  let current = 0;
+
+  function show(index) {
+    current = (index + figures.length) % figures.length;
+    const img = figures[current].querySelector("img");
+    if (!img) return;
+    image.src = img.currentSrc || img.src;
+    image.alt = img.alt || "";
+    caption.textContent = img.alt || "";
+    box.classList.add("open");
+    box.setAttribute("aria-hidden", "false");
+    document.body.style.overflow = "hidden";
+  }
+
+  function hide() {
+    box.classList.remove("open");
+    box.setAttribute("aria-hidden", "true");
+    document.body.style.overflow = "";
+    image.src = "";
+  }
+
+  figures.forEach((figure, index) => {
+    figure.addEventListener("click", () => show(index));
+  });
+  close.addEventListener("click", hide);
+  prev.addEventListener("click", (e) => { e.stopPropagation(); show(current - 1); });
+  next.addEventListener("click", (e) => { e.stopPropagation(); show(current + 1); });
+
+  box.addEventListener("click", (e) => {
+    if (e.target === box) hide();
+  });
+
+  document.addEventListener("keydown", (e) => {
+    if (!box.classList.contains("open")) return;
+    if (e.key === "Escape") hide();
+    if (e.key === "ArrowLeft") show(current - 1);
+    if (e.key === "ArrowRight") show(current + 1);
+  });
+})();
+</script>
+
 </body>
 </html>
