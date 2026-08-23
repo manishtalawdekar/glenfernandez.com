@@ -146,6 +146,16 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
  .gallery figure::after{display:none}
 }
 </style>
+<style>
+.facebook-videos{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:22px;margin-top:45px}
+.facebook-video{border:1px solid var(--line);background:#0e0e0e;padding:12px}
+.facebook-video h3{font-family:"Bebas Neue",sans-serif;font-size:28px;line-height:1;margin:8px 8px 14px;font-weight:400}
+.facebook-frame{width:100%;border:0;display:block;background:#050505}
+.facebook-frame.horizontal{aspect-ratio:16/9}
+.facebook-frame.vertical{aspect-ratio:9/16;max-height:680px}
+.facebook-note{color:#999;font-size:13px;margin:18px 0 0}
+@media(max-width:800px){.facebook-videos{grid-template-columns:1fr}.facebook-frame.vertical{max-height:none}}
+</style>
 </head>
 <body>
 <nav>
@@ -154,6 +164,7 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
   <div class="nav-links">
    <a href="#about">About</a>
    <a href="#gallery">Gallery</a>
+      <a href="#videos">Videos</a>
    <a href="#sound-rental">Sound Rental</a>
    <a href="#resume">Experience</a>
    <a href="#contact">Contact</a>
@@ -233,6 +244,24 @@ footer{padding:45px 0;color:#777;border-top:1px solid var(--line);font-size:12px
    <figure data-gallery-index="29" class="tall"><img src="images/live-30.jpeg" alt="Glen Fernandez performing live" loading="lazy"></figure>
   </div>
  </div>
+</section>
+
+<section id="videos">
+<div class="container">
+<div class="eyebrow">Facebook</div>
+<h2>Live videos.</h2>
+<div class="facebook-videos">
+<article class="facebook-video"><h3>Live Performance</h3>
+<iframe class="facebook-frame horizontal" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F2199915227465383&show_text=false" title="Glen Fernandez Facebook video" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></article>
+<article class="facebook-video"><h3>Live Performance</h3>
+<iframe class="facebook-frame horizontal" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F3296778497196859&show_text=false" title="Glen Fernandez Facebook video" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></article>
+<article class="facebook-video"><h3>Live Performance</h3>
+<iframe class="facebook-frame vertical" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F513844681790983&show_text=false" title="Glen Fernandez Facebook video" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></article>
+<article class="facebook-video"><h3>Live Performance</h3>
+<iframe class="facebook-frame vertical" src="https://www.facebook.com/plugins/video.php?href=https%3A%2F%2Fwww.facebook.com%2Freel%2F1446875237018439&show_text=false" title="Glen Fernandez Facebook video" scrolling="no" frameborder="0" allow="autoplay; clipboard-write; encrypted-media; picture-in-picture; web-share" allowfullscreen></iframe></article>
+</div>
+<p class="facebook-note">Videos are embedded from Facebook.</p>
+</div>
 </section>
 
 <section id="resume">
